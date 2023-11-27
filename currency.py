@@ -1,10 +1,12 @@
 import streamlit as st
+st.markdown('<h1 style=font-size:40px; >Unit & Currency Converter</h1>', unsafe_allow_html=True)
 centered_markdown = """
 <div style="display: flex; justify-content: center; align-items: center; height: 30vh;">
     <iframe src="https://lottie.host/embed/166bec96-faad-4ed8-aa2f-8f393e6563c7/MotO6059jJ.json" width="200" height="200"></iframe>
 </div>
 """
 st.markdown(centered_markdown, unsafe_allow_html=True)
+st.markdown('<h1>Currency</h1>', unsafe_allow_html=True)
 col1,col2,col3 = st.columns(3)
 with col1:
     curr1 = st.selectbox('Currency1',['EUR','USD','GBP','INR'])
