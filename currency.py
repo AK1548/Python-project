@@ -10,7 +10,7 @@ with col2:
     if curr1 =='EUR':
         one_two = 0.91
     elif curr1 =='USD':
-        st.markdown('<iframe src="https://lottie.host/embed/d28e1f50-2898-4747-a02d-01439edbc13c/mfCpMXpv7t.json"></iframe>',unsafe_allow_html=True)
+        one_two = 0.91
     else:
         st.markdown('<iframe src="https://lottie.host/embed/d28e1f50-2898-4747-a02d-01439edbc13c/mfCpMXpv7t.json"></iframe>',unsafe_allow_html=True)
 with col3:
