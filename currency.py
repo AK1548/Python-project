@@ -15,4 +15,3 @@ with col2:
         st.markdown('<iframe src="https://lottie.host/embed/d28e1f50-2898-4747-a02d-01439edbc13c/mfCpMXpv7t.json"></iframe>',unsafe_allow_html=True)
 with col3:
     curr2 = st.selectbox('Currency 2',['EUR','USD','GBP'])
-
