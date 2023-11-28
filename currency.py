@@ -1,4 +1,5 @@
 import streamlit as st
+st.markdown('<style> body{text-align:center;} </style>',unsafe_allow_html=True)
 st.markdown('<h1 style=font-size:40px; >Unit & Currency Converter</h1>', unsafe_allow_html=True)
 centered_markdown = """
 <div style="display: flex; justify-content: center; align-items: center; height: 30vh;">
@@ -39,5 +40,36 @@ with col1:
 with col3:
     converted=amount*one_two
     st.success(converted)
-
-st.markdown('<style> body{text-align:center;} </style>',unsafe_allow_html=True)
+st.markdown('<h1>Length</h1>', unsafe_allow_html=True)
+col1,col2,col3 = st.columns(3)
+with col1:
+    curr1 = st.selectbox('Length1',['cm','inch','km','miles'])
+with col2:
+        st.markdown('<iframe src="https://lottie.host/embed/c36eebb5-88ec-4a33-99d2-549cee0eea4d/uikYxqE3PQ.json"></iframe>',unsafe_allow_html=True)
+with col3:
+    curr2 = st.selectbox('Currency 2',['cm','inch','km','miles'])
+if curr1=='cm':
+    if curr2=='cm': one_two=1
+    elif curr2 == 'inch': one_two=0.393701
+    elif curr2 == 'km': one_two=1/100000
+    elif curr2 == 'miles': one_two=1/160934
+if curr1=='inch':
+    if curr2=='cm': one_two=1/0.393701
+    elif curr2 == 'inch': one_two=1
+    elif curr2 == 'km': one_two=1/39370.1
+    elif curr2 == 'miles': one_two=1/63360
+if curr1=='km':
+    if curr2=='cm': one_two=100000
+    elif curr2 == 'inch': one_two=39370.1
+    elif curr2 == 'km': one_two=1
+    elif curr2 == 'miles': one_two=0.621371
+if curr1=='miles':
+    if curr2=='cm': one_two=160934
+    elif curr2 == 'inch': one_two=63360
+    elif curr2 == 'km': one_two=1/0.621371
+    elif curr2 == 'miles': one_two=1
+with col1:
+    amount=st.number_input(curr1)
+with col3:
+    converted=amount*one_two
+    st.success(converted)
